@@ -1,0 +1,42 @@
+first step is to design my memory card grid in html  
+
+then style in css 
+
+create and assign my global variables in js
+create a variable for the gameboard itself
+create a variable for when the game is won
+store my cached element to refer back to
+
+build an array of one card first but build to 16 cards
+in a constant named memoryCards store my 16 cards or elements
+
+when the game has loaded, the game should start or initialize
+a initialize function should be created 
+call render at end of initialize function
+
+to call render, create a render function 
+render a congratulatory message for winner after each card is matched 
+
+be prepared to loop over the board to access each element
+use the current index of the iteration to gain access to the desired memoryCards
+
+create a way to flip the card 
+create a way to not allow that card to be flipped again
+then if cards dont match, render cards flipped back 
+then if both cards are flipped, and both cards match, remove from board
+once all cards are removed then add winner function and show congratulatory message
+
+
+create event listener for when the card is clicked and make it flip, 
+then handle the click. handle will have an event and parameter
+create event listener for when my launch button is clicked, 
+then handle the click, handle will have an event and parameter
+create event listener for return to earth, 
+then handle the click handle will have an event and parameter
+
+find a way to obtain access to a memoryCard 
+
+
+store my reset button in constant called resetBtn
+create some functionality for the reset (return to earth) button
+if reset is pressed then randomize and flip over all cards
