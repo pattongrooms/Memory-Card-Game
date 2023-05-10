@@ -1,0 +1,37 @@
+/* body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: blue;
+  color: white;
+  text-align: center
+} */
+
+
+/* 
+a {
+  margin-top: 12px;
+  background-color: red;
+  color: white;
+  border-radius: 15%;
+  border: 20px;
+  border-color: black;
+} */
+
+
+
+#container {
+  background-color: red;
+  color: white;
+  height: 300px;
+  width: 400px;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+
+
+
+img { 
+  height: 10vh;
+  width: 5vw;
+}
