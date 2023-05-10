@@ -61,8 +61,9 @@ memoryCards.sort(() => 0.5 - Math.random()) //shortcut to randomize array
 // console.log(memoryCards)
 
 const containerVisual = document.querySelector('#container')
-const cardsClicked = []
-const cardsClickedIds = []
+let cardsClicked = []
+let cardsClickedIds = []
+const cardsWon = []
 
 // console.log(containerVisual)
 
@@ -81,12 +82,23 @@ function buildBoard() {
 
 function seeMatch() {
   const cards = document.querySelectorAll('img')
-
+  const selectOneId = cardsClickedIds[0]
+  const selectTwoId = cardsClickedIds[1]
+  console.log(cards)
   console.log('check for match!')
-  if (cardsClicked[0] == cardsClicked[1]) {
-    alert('interstellar match')
-    cards[cardsClickedIds[0].setAttribute('src', 'images/blank_IMG.png')]
+  if (selectOneId === selectTwoId) {
+    alert('Same Image!')
   }
+  if (cardsClicked[0] == cardsClicked[1]) {
+    alert('Interstellar Match!')
+    cards[selectOneId[0]].setAttribute('src', 'images/blank_IMG.png')
+    cards[selectTwoId[1]].setAttribute('src', 'images/blank_IMG.png')
+    cards[selectOneId[0]].removeEventListener('click', flipCard)
+    cards[selectTwoId[1]].removeEventListener('click', flipCard)
+    cardsWon.push(cardsClicked)
+  }
+  cardsClicked = []
+  cardsClickedIds = []
 }
 
 function flipCard() {
