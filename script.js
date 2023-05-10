@@ -62,6 +62,7 @@ memoryCards.sort(() => 0.5 - Math.random()) //shortcut to randomize array
 
 const containerVisual = document.querySelector('#container')
 const cardsClicked = []
+const cardsClickedIds = []
 
 // console.log(containerVisual)
 
@@ -78,14 +79,22 @@ function buildBoard() {
   }
 }
 
-function 
+function seeMatch() {
+  const cards = document.querySelectorAll('img')
+
+  console.log('check for match!')
+  if (cardsClicked[0] == cardsClicked[1]) {
+    alert('interstellar match')
+    // cards[]
+  }
+}
 
 function flipCard() {
-  console.log(memoryCards)
   const cardId = this.getAttribute('data-id') //this key allows to interact with clicked img
   cardsClicked.push(memoryCards[cardId].name)
-  console.log('clicked', cardId)
+  cardsClickedIds.push(cardId)
   console.log(cardsClicked)
+  console.log(cardsClickedIds)
   this.setAttribute('src', memoryCards[cardId].img)
   if (cardsClicked.length === 2) {
     setTimeout(seeMatch, 300)
