@@ -61,6 +61,7 @@ memoryCards.sort(() => 0.5 - Math.random()) //shortcut to randomize array
 // console.log(memoryCards)
 
 const containerVisual = document.querySelector('#container')
+const resultVisual = document.querySelector('#result')
 let cardsClicked = []
 let cardsClickedIds = []
 const cardsWon = []
@@ -86,7 +87,9 @@ function seeMatch() {
   const selectTwoId = cardsClickedIds[1]
   console.log(cards)
   console.log('check for match!')
-  if (selectOneId === selectTwoId) {
+  if (selectOneId == selectTwoId) {
+    cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
+    cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
     alert('Same Image!')
   }
   if (cardsClicked[0] == cardsClicked[1]) {
@@ -95,10 +98,21 @@ function seeMatch() {
     cards[selectTwoId[1]].setAttribute('src', 'images/blank_IMG.png')
     cards[selectOneId[0]].removeEventListener('click', flipCard)
     cards[selectTwoId[1]].removeEventListener('click', flipCard)
+
     cardsWon.push(cardsClicked)
+  } else {
+    cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
+    cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
+    alert('Lost In Space Try Again!')
   }
+  resultVisual.innerHTML = cardsWon.length
   cardsClicked = []
   cardsClickedIds = []
+
+  if (cardsWon.length == memoryCards.length / 2) {
+    // alert('Win! Returning to Earth')
+    resultVisual.innerHTML = 'Congratulations Returning to Earth!'
+  }
 }
 
 function flipCard() {
@@ -109,6 +123,6 @@ function flipCard() {
   console.log(cardsClickedIds)
   this.setAttribute('src', memoryCards[cardId].img)
   if (cardsClicked.length === 2) {
-    setTimeout(seeMatch, 300)
+    setTimeout(seeMatch, 500)
   }
 }
