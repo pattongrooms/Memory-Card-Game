@@ -7,8 +7,8 @@ create a variable for the gameboard itself
 create a variable for when the game is won
 store my cached element to refer back to
 
-build an array of one card first but build to 16 cards
-in a constant named memoryCards store my 16 cards or elements
+build an array of one card first but build to 12 cards
+in a constant named memoryCards store my 12 cards or elements
 
 when the game has loaded, the game should start or initialize
 a initialize function should be created 

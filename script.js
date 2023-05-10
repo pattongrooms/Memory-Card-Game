@@ -61,6 +61,7 @@ memoryCards.sort(() => 0.5 - Math.random()) //shortcut to randomize array
 // console.log(memoryCards)
 
 const containerVisual = document.querySelector('#container')
+const cardsClicked = []
 
 // console.log(containerVisual)
 
@@ -69,7 +70,7 @@ buildBoard()
 function buildBoard() {
   for (let i = 0; i < memoryCards.length; i++) {
     const card = document.createElement('img')
-    card.setAttribute('src', 'images/earth_IMG.jpeg') //ashley was working
+    card.setAttribute('src', 'images/space_IMG.jpeg') //ashley was working
     card.setAttribute('data-id', i)
     card.addEventListener('click', flipCard)
     // console.log(card, i)
@@ -77,6 +78,16 @@ function buildBoard() {
   }
 }
 
+function 
+
 function flipCard() {
-  console.log('clicked')
+  console.log(memoryCards)
+  const cardId = this.getAttribute('data-id') //this key allows to interact with clicked img
+  cardsClicked.push(memoryCards[cardId].name)
+  console.log('clicked', cardId)
+  console.log(cardsClicked)
+  this.setAttribute('src', memoryCards[cardId].img)
+  if (cardsClicked.length === 2) {
+    setTimeout(seeMatch, 300)
+  }
 }
