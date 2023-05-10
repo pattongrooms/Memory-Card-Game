@@ -76,7 +76,6 @@ function buildBoard() {
     card.setAttribute('src', 'images/space_IMG.jpeg') //ashley was working
     card.setAttribute('data-id', i)
     card.addEventListener('click', flipCard)
-    // console.log(card, i)
     containerVisual.appendChild(card)
   }
 }
@@ -90,7 +89,7 @@ function seeMatch() {
   if (selectOneId == selectTwoId) {
     cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
     cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
-    alert('Same Image!')
+    alert('You have clicked the same image!')
   }
   if (cardsClicked[0] == cardsClicked[1]) {
     alert('Interstellar Match!')
@@ -98,20 +97,19 @@ function seeMatch() {
     cards[selectTwoId[1]].setAttribute('src', 'images/blank_IMG.png')
     cards[selectOneId[0]].removeEventListener('click', flipCard)
     cards[selectTwoId[1]].removeEventListener('click', flipCard)
-
     cardsWon.push(cardsClicked)
   } else {
     cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
     cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
     alert('Lost In Space Try Again!')
   }
-  resultVisual.innerHTML = cardsWon.length
+  resultVisual.textContent = cardsWon.length
   cardsClicked = []
   cardsClickedIds = []
 
   if (cardsWon.length == memoryCards.length / 2) {
     // alert('Win! Returning to Earth')
-    resultVisual.innerHTML = 'Congratulations Returning to Earth!'
+    resultVisual.textContent = 'Congratulations Returning to Earth!'
   }
 }
 
