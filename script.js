@@ -85,7 +85,7 @@ function seeMatch() {
   console.log('check for match!')
   if (cardsClicked[0] == cardsClicked[1]) {
     alert('interstellar match')
-    // cards[]
+    cards[cardsClickedIds[0].setAttribute('src', 'images/blank_IMG.png')]
   }
 }
 
