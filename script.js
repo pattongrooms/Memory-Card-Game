@@ -73,7 +73,7 @@ buildBoard()
 function buildBoard() {
   for (let i = 0; i < memoryCards.length; i++) {
     const card = document.createElement('img')
-    card.setAttribute('src', 'images/space_IMG.jpeg') //ashley was working
+    card.setAttribute('src', 'images/space_IMG.jpeg')
     card.setAttribute('data-id', i)
     card.addEventListener('click', flipCard)
     containerVisual.appendChild(card)
@@ -93,10 +93,11 @@ function seeMatch() {
   }
   if (cardsClicked[0] == cardsClicked[1]) {
     alert('Interstellar Match!')
-    cards[selectOneId[0]].setAttribute('src', 'images/blank_IMG.png')
-    cards[selectTwoId[1]].setAttribute('src', 'images/blank_IMG.png')
-    cards[selectOneId[0]].removeEventListener('click', flipCard)
-    cards[selectTwoId[1]].removeEventListener('click', flipCard)
+
+    cards[selectOneId].setAttribute('src', 'images/blank_IMG.png')
+    cards[selectTwoId].setAttribute('src', 'images/blank_IMG.png')
+    cards[selectOneId].removeEventListener('click', flipCard)
+    cards[selectTwoId].removeEventListener('click', flipCard)
     cardsWon.push(cardsClicked)
   } else {
     cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
