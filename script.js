@@ -85,17 +85,31 @@ function buildBoard() {
   }
 }
 
+//match funtion defined
+//responsible for checking if two clicked cards match or not
+
+//selects all the `<img>` elements on the page and retrieves the IDs of the two clicked cards from the `cardsClickedIds` array
+
 function seeMatch() {
   const cards = document.querySelectorAll('img')
   const selectOneId = cardsClickedIds[0]
   const selectTwoId = cardsClickedIds[1]
 
-  console.log('check for match!')
+  //If the IDs of the two cards are the same, player clicked the same card twice
+  //function sets the image sources of both cards to 'images/space_IMG.jpeg' (effectively flipping them back over)
+  //displays an alert indicating that the same image was clicked
+
   if (selectOneId == selectTwoId) {
     cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
     cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
     alert('You have clicked the same image!')
   }
+
+  //If the names of the two clicked cards match, found matching pair!
+  //function sets the image sources of both cards to 'images/blank_IMG.png', indicating that they have been removed from the game
+  //the 'click' event listeners for these cards are removed to prevent further interaction
+  //matched cards are added to the `cardsWon` array
+
   if (cardsClicked[0] == cardsClicked[1]) {
     alert('Interstellar Match!')
 
@@ -104,20 +118,38 @@ function seeMatch() {
     cards[selectOneId].removeEventListener('click', flipCard)
     cards[selectTwoId].removeEventListener('click', flipCard)
     cardsWon.push(cardsClicked)
+
+    //If the names of the two clicked cards do not match, user is unsuccessful
+    //function sets the image sources of both cards to 'images/space_IMG.jpeg' (flipping them back over)
+    //displays an alert indicating a failed attempt
   } else {
     cards[selectOneId].setAttribute('src', 'images/space_IMG.jpeg')
     cards[selectTwoId].setAttribute('src', 'images/space_IMG.jpeg')
     alert('Lost In Space Try Again!')
   }
+
+  // The number of cards won (the length of the `cardsWon` array) is displayed in the `resultVisual` element
+  //The `cardsClicked` and `cardsClickedIds` arrays are reset to empty
+
   resultVisual.textContent = cardsWon.length
   cardsClicked = []
   cardsClickedIds = []
+
+  //If all the cards have been matched (the length of the `cardsWon` array is equal to half the length of the `memoryCards` array)
+  //a congratulations message is displayed in the `resultVisual` element
 
   if (cardsWon.length == memoryCards.length / 2) {
     // alert('Win! Returning to Earth')
     resultVisual.textContent = 'Congratulations Returning to Earth!'
   }
 }
+
+//The `flipCard()` function is defined
+//It is invoked when a card is clicked
+//retrieves the `data-id` attribute of the clicked card to determine its index in the `memoryCards` array
+//The name and ID of the card are added to the `cardsClicked` and `cardsClickedIds` arrays
+//The image source of the clicked card is set to the corresponding `img` value from the `memoryCards` array
+//If two cards have been clicked, the `seeMatch()` function is called after a delay of 500 milliseconds
 
 function flipCard() {
   const cardId = this.getAttribute('data-id') //this key allows to interact with clicked img
