@@ -24,7 +24,7 @@
 
 ### **_Getting Started_**
 
-##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
+##### A Trello board was used to keep track of development progress and can be viewed [here](https://spacememorygame.surge.sh/).
 
 ##### The project itself was deployed and can be viewed [here](URL).
 
