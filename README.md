@@ -24,8 +24,6 @@
 
 ### **_Getting Started_**
 
-##### Sign up and sign in as a new user and then walk through the Ranger creation page to begin your warband.
-
 ##### A Trello board was used to keep track of development progress and can be viewed [here](URL).
 
 ##### The project itself was deployed and can be viewed [here](URL).
@@ -44,6 +42,12 @@
 
 ##### Background Images: [Space Themes](https://stock.adobe.com/search?k=%22outer+space+background%22)
 
-##### : [ia.net](https://ia.net/writer/support/general/markdown-guide)
+##### https://ia.net/writer/support/general/markdown-guide
+
+##### https://www.w3schools.com/howto/howto_css_flip_card.asp
+
+##### https://github.com/pattongrooms/u1_lab_rock_paper_scissors
+
+##### https://www.youtube.com/watch?v=xWdkt6KSirw
 
 ---
