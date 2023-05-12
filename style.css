@@ -77,12 +77,18 @@ img {
   background-color: rgba(255, 255, 255, 0);
 }
 
-/* @media (max-width: 1250px) {
+@media only screen and (max-width: 750px) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+  background-image: url('images/blank_IMG.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   }
-} */
+  .game {
+    width: 400px;
+  }
+  #container img {
+    height: auto;
+    width: 50%;
+  }
+}
