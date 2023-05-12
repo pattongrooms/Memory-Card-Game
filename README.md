@@ -10,7 +10,7 @@
 
 ### Description
 
-#### This is a space themed memory card game. Start by clicking the "Launch" button at the bottom of your page. The cards will proceed to shuffle and be laid out facedown in front of you. Proceed to select each card one by one until you find a matching pair. Proceed until you have found each planet's matching pair to "Return to Earth"
+#### This is a space themed memory card game. Start by clicking the "Launch" button at the bottom of your page. You will be launched into space! The cards will proceed to shuffle and be laid out facedown in front of you. Proceed to select each card one by one until you find a matching pair. Proceed until you have found each planet's matching pair to "Return to Earth"
 
 ---
 
@@ -19,8 +19,6 @@
 - draw.io
 - VS Code
 - Github
-  - Sub-item 2
-- Technology 3
 
 ---
 
@@ -42,21 +40,10 @@
 
 ---
 
-### **_Future Updates_**
-
-- [ ] Future Update 1
-- [ ] Future Update 2
-- [x] Completed Update
-- [x] ~~Strikethrough~~ Items Also
-
----
-
 ### **_Credits_**
 
-##### Funny Images: [DuckDuckGo Search](http://www.duckduckgo.com)
+##### Background Images: [Space Themes](https://stock.adobe.com/search?k=%22outer+space+background%22)
 
-##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
-
-##### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+##### : [ia.net](https://ia.net/writer/support/general/markdown-guide)
 
 ---
