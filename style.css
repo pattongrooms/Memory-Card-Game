@@ -27,6 +27,7 @@ p {
   text-align: center;
   font-size: 35px;
   font-weight: bold;
+
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
@@ -60,14 +61,13 @@ button {
   grid-template-rows: repeat(2, calc(130px / 2 * 3));
 
   background-image: url('images/blank_IMG.png');
-  
-
 }
 
 .game {
   
   display: flex;
   
+
 }
 
 img { 
