@@ -24,9 +24,9 @@
 
 ### **_Getting Started_**
 
-##### A Trello board was used to keep track of development progress and can be viewed [here](https://spacememorygame.surge.sh/).
+##### A Trello board was used to keep track of development progress and can be viewed [here]().
 
-##### The project itself was deployed and can be viewed [here](URL).
+##### The project itself was deployed and can be viewed [here](https://spacememorygame.surge.sh/).
 
 ---
 
@@ -55,5 +55,7 @@
 ##### https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 ##### https://fonts.google.com/specimen/Orbitron?preview.text=Space%20Memory&preview.text_type=custom&query=orbitron
+
+##### https://softauthor.com/javascript-working-with-images/#:~:text=Create%20Image%20Element%20in%20JavaScript,URL%20to%20its%20src%20attribute.&text=Finally%2C%20add%20the%20image%20element,it%20to%20the%20body%20element.
 
 ---
