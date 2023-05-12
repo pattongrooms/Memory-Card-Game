@@ -1,6 +1,6 @@
 # Memory-Card-Game
 
-## Date: 09/26/1994
+## Date: 05/05/2023
 
 ### By: Patton Grooms
 
@@ -49,5 +49,11 @@
 ##### https://github.com/pattongrooms/u1_lab_rock_paper_scissors
 
 ##### https://www.youtube.com/watch?v=xWdkt6KSirw
+
+##### https://www.w3schools.com/js/js_random.asp
+
+##### https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+
+##### https://fonts.google.com/specimen/Orbitron?preview.text=Space%20Memory&preview.text_type=custom&query=orbitron
 
 ---
